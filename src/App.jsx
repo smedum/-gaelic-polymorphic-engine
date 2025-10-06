@@ -1,3 +1,4 @@
+import React from 'react';
 function App() {
   const [activeTab, setActiveTab] = React.useState('home');
   const [demoType, setDemoType] = React.useState('pronunciation');
