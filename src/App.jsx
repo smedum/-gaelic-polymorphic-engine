@@ -511,9 +511,8 @@ function App() {
             <a href="#" className="text-blue-400 hover:text-blue-300">Contact</a>
           </div>
         </div>
-      </footer>
+       </footer>
     </div>
   );
 }
 
-export default App;
