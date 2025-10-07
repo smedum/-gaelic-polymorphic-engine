@@ -50,7 +50,7 @@ function App() {
         success: true,
         pipeline: 'Song Analysis',
         data: {
-          original: inputText || 'Gura mis' tha fo éislein, Moch sa mhadainn là bròin',
+          original: inputText || 'Gura mis tha fo éislein, Moch sa mhadainn là bròin',
           translation: 'I am under sorrow, Early in a morning of sadness',
           structure: {
             meter: 'Traditional Gaelic lyrical meter',
@@ -147,30 +147,26 @@ function App() {
             {
               icon: '👴',
               title: 'Elder Pipeline',
-              description: 'Cultural context, historical notes, and traditional Gaelic wisdom from native speakers',
-              color: 'from-blue-500 to-blue-600',
-              examples: ['Proverbs', 'Historical context', 'Traditional knowledge']
+              description: 'Cultural context, historical notes, and traditional Gaelic wisdom',
+              color: 'from-blue-500 to-blue-600'
             },
             {
               icon: '📚',
               title: 'Learner Pipeline',
-              description: 'Pronunciation guides, simplified explanations, and learning support for Gaelic students',
-              color: 'from-green-500 to-green-600',
-              examples: ['Pronunciation', 'Grammar', 'Vocabulary building']
+              description: 'Pronunciation guides, simplified explanations, and learning support',
+              color: 'from-green-500 to-green-600'
             },
             {
               icon: '🎵',
               title: 'Song Pipeline',
-              description: 'Musical patterns, lyrical structure, and cultural significance of Gaelic songs',
-              color: 'from-purple-500 to-purple-600',
-              examples: ['Song lyrics', 'Musical analysis', 'Cultural context']
+              description: 'Musical patterns, lyrical structure, and cultural significance',
+              color: 'from-purple-500 to-purple-600'
             },
             {
               icon: '📖',
               title: 'Storytelling Pipeline',
-              description: 'Narrative structures, character development, and moral lessons in Gaelic stories',
-              color: 'from-orange-500 to-orange-600',
-              examples: ['Folktales', 'Story structure', 'Character analysis']
+              description: 'Narrative structures, character development, and moral lessons',
+              color: 'from-orange-500 to-orange-600'
             }
           ].map((feature, idx) => (
             <div key={idx} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all">
@@ -178,14 +174,7 @@ function App() {
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-bold mb-3 text-gray-800">{feature.title}</h3>
-              <p className="text-gray-600 mb-4">{feature.description}</p>
-              <div className="space-y-2">
-                {feature.examples.map((example, i) => (
-                  <span key={i} className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm mr-2 mb-2">
-                    {example}
-                  </span>
-                ))}
-              </div>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -224,7 +213,7 @@ function App() {
           Enter Gaelic content and choose a pipeline to see specialized processing
         </p>
         
-        {/* Pipeline Selector - FIXED VERSION */}
+        {/* Pipeline Selector - CORRECTED */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h3 className="text-xl font-semibold mb-4 text-gray-700">Choose Processing Pipeline:</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -292,14 +281,8 @@ function App() {
             <div className="text-5xl mb-4">🧭</div>
             <h3 className="text-xl font-semibold mb-2 text-gray-800">Ready to Process Gaelic Content</h3>
             <p className="text-gray-600 mb-4">
-              Select a pipeline and enter Gaelic text to see specialized analysis through:
+              Select a pipeline and enter Gaelic text to see specialized analysis
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">👴 Elder Wisdom</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">📚 Learning Support</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🎵 Song Analysis</span>
-              <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">📖 Storytelling</span>
-            </div>
           </div>
         )}
 
@@ -312,44 +295,41 @@ function App() {
               </span>
             </div>
             
-            {/* Dynamic Results Based on Pipeline */}
-            {selectedPipeline === 'elder' && (
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
-                  <p className="text-xl font-semibold text-gray-800 mb-2">{result.data.original}</p>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-gray-700 mb-3">Cultural Context</h4>
-                    <p className="text-gray-700">{result.data.cultural_context}</p>
-                  </div>
-
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h4 className="font-semibold text-gray-700 mb-3">Traditional Wisdom</h4>
-                    <p className="text-gray-700">{result.data.traditional_wisdom}</p>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-gray-700 mb-2">Historical Notes</h4>
-                  <p className="text-gray-700">{result.data.historical_notes}</p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-3">Related Proverbs</h4>
-                  <div className="space-y-2">
-                    {result.data.related_proverbs.map((proverb, idx) => (
-                      <div key={idx} className="bg-gray-50 p-4 rounded-lg">
-                        <p className="text-gray-800">{proverb}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            {/* Simple Result Display */}
+            <div className="space-y-4">
+              <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
+                <p className="text-xl font-semibold text-gray-800 mb-2">{result.data.original}</p>
+                {result.data.translation && (
+                  <p className="text-gray-600 italic">{result.data.translation}</p>
+                )}
               </div>
-            )}
-
-            {/* Other pipeline results would go here... */}
+              
+              <div className="grid md:grid-cols-2 gap-4">
+                {Object.entries(result.data).map(([key, value]) => {
+                  if (key === 'original' || key === 'translation') return null;
+                  if (typeof value === 'object') {
+                    return (
+                      <div key={key} className="bg-gray-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-700 mb-2 capitalize">
+                          {key.replace('_', ' ')}
+                        </h4>
+                        <pre className="text-sm text-gray-600 whitespace-pre-wrap">
+                          {JSON.stringify(value, null, 2)}
+                        </pre>
+                      </div>
+                    );
+                  }
+                  return (
+                    <div key={key} className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-700 mb-1 capitalize">
+                        {key.replace('_', ' ')}
+                      </h4>
+                      <p className="text-gray-600">{value}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -418,13 +398,20 @@ function App() {
       {activeTab === 'demo' && <DemoPage />}
       {activeTab === 'about' && <AboutPage />}
       
-      {/* Footer */}
+      {/* Footer - COMPLETE AND CORRECT */}
       <footer className="bg-gray-800 text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="mb-2">🧭 Gaelic Polymorphic Engine - Four Ways to Experience Gaelic</p>
           <p className="text-sm text-gray-400">Elder Wisdom • Learning Support • Song Analysis • Storytelling Insights</p>
           <div className="mt-4 space-x-4">
-            <a href="#" className="text-blue-400 hover:text-blue-300">GitHub</a>
+            <a href="https://github.com/smedum/-gaelic-polymorphic-engine" className="text-blue-400 hover:text-blue-300">GitHub</a>
             <a href="#" className="text-blue-400 hover:text-blue-300">Documentation</a>
-            <a href="#" className="text-blue-400 hover:text-blue-
-      
+            <a href="#" className="text-blue-400 hover:text-blue-300">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
