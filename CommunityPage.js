@@ -1,5 +1,3 @@
-# Create the Community hub
-cat > src/components/CommunityPage.js << 'EOF'
 import React from 'react';
 
 const CommunityPage = () => (
