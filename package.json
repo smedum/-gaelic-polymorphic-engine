@@ -1,4 +1,9 @@
 {
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+{
   "name": "gaelic-polymorphic-engine",
   "type": "module",
   "scripts": {
