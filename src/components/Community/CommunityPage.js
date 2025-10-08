@@ -1,3 +1,5 @@
+# Copy this exact content to completely replace the file
+cat > src/components/Community/CommunityPage.js << 'EOL'
 import React, { useState } from 'react';
 
 const CommunityPage = ({ playSound }) => {
@@ -165,3 +167,4 @@ const CommunityPage = ({ playSound }) => {
 };
 
 export default CommunityPage;
+EOL
