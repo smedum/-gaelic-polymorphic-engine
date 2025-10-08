@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CommunityPage from './components/CommunityPage';
-import AboutPage from './components/AboutPage';
+import CommunityPage from './components/Community/CommunityPage.jsx';
+import AboutPage from './components/About/AboutComponent';
 
 const NavBar = ({ activeTab, setActiveTab }) => {
   const navItems = [
