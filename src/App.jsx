@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CommunityPage from './components/CommunityPage';
+import CommunityPage from "./components/Community/CommunityPage";
 import AboutPage from './components/AboutPage';
 
 const NavBar = ({ activeTab, setActiveTab }) => {
