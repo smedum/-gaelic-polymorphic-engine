@@ -1,3 +1,5 @@
+# Create a clean version of AboutComponent
+cat > src/components/About/AboutComponent.jsx << 'EOF'
 import React from 'react';
 
 const AboutComponent = () => {
@@ -35,3 +37,4 @@ const AboutComponent = () => {
 };
 
 export default AboutComponent;
+EOF
