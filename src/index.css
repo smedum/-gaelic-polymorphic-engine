@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Cache bust: Wed Oct  8 21:47:52 UTC 2025 */
+@layer utilities { .cache-bust-1759960415 { color: red; } }
