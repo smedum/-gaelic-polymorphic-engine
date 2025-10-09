@@ -1,5 +1,5 @@
 {
-  "name": "gaelic-polymorphic-engine",
+  "name": "gaelic-language-engine",
   "type": "module",
   "scripts": {
     "dev": "vite",
